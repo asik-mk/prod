@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FRUITS=("apple" "banana" "mango")
+FRUITS=("$1" "$2" "$3")
 
 echo "my fav fruit is ${FRUITS[0]}"
 
