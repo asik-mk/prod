@@ -6,23 +6,28 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 VALIDATE(){
-    if [ $1 -ne 0 ]
+    if [ $1 -ne 0 ]7
     then
-        echo "Installation of $2 $R failed $N"
+        echo -e "Installation of $2 $R failed $N"
         exit 1
     else
-        echo "Successfully installed $G $2 $N"
+        echo -e "Successfully installed $G $2 $N"
     fi
 }
     if [ $ID -ne 0 ]
     then
-        echo "Switch to $G root $N user"
+        echo -e "Switch to $G root $N user"
         exit 1
     else
-        echo "$R fasten $Y the $G belt $N"
+        echo -e "$R fasten $Y the $G belt $N"
     fi
 
 yum install mysql -y &>> $LOGFILE
