@@ -22,11 +22,11 @@ VALIDATE()
 
     if [ $1 -ne 0 ]
     then 
-            echo "installation of $2 $G failed $N"
+            echo "installation of $2 $R failed $N"
                 exit 1
     else
 
-        echo "Successfully $G installed $2 $N"
+        echo "Successfully $G installed $N $2"
 
     fi
 
