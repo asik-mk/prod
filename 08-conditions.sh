@@ -1,13 +1,14 @@
 #!/bin/bash
 
 ID=(id -u)
+
  if [ $ID -ne 0 ]
  then 
         echo "switch to root user by running 'sudo su -' "
-            exit 1
+        exit 1
  else
 
-     echo "Successfully installed mysql"
+     echo "installing "
 
   fi   
 
@@ -15,7 +16,7 @@ yum install mysql -y
 
  if [ $? -ne 0 ]
  then 
-        echo "switch to root user by running 'sudo su -' "
+        echo "installation failed"
             exit 1
  else
 
@@ -27,7 +28,7 @@ yum install git -y
 
  if [ $? -ne 0 ]
  then 
-    echo " swtich to root user by running sudo su - "
+    echo "installation failed"
     exit 1
  else 
     echo "successfully installed git"
