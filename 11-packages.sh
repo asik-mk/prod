@@ -24,7 +24,7 @@ else
 fi
 
 for package in $@
-    do
+do
         yum list installed $package
         if [ $? -ne 0 ]
         then 
@@ -32,4 +32,4 @@ for package in $@
             VALIDATE $? "Installing the $package"
         else
             echo "Already installed"
-    done
+done
