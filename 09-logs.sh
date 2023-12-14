@@ -1,11 +1,14 @@
 #!/bin/bash
 ID=$(id -u)
+TIMESTAMP=$(date +%F-%h-%m-%s)
+
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
         echo "Installation of $2 failed"
-        #exit 1
+        exit 1
     else
         echo "Successfully installed $2"
     fi
@@ -21,11 +24,11 @@ VALIDATE(){
 
 
 
-yum install mysql1 -y 
+yum install mysql -y &>> $LOGFILE
 
 VALIDATE $? mysql
 
-yum install gitt -y 
+yum install git -y &>> $LOGFILE
 
 VALIDATE $? git
 
