@@ -9,6 +9,8 @@ ID=(id -u)
 
      echo "Successfully installed mysql"
 
+  fi   
+
 yum install mysql -y
 
  if [ $? -ne 0 ]
