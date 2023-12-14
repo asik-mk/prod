@@ -2,8 +2,8 @@
 
 ID=$(id -u)
 R="\e[31m"
-G=\e[32m
-Y=\e[33m
+G="\e[32m"
+Y="\e[33m"
 
 TIMESTAMP=$(date +%F-%h-%m-%s)
 
