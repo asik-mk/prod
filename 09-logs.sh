@@ -21,11 +21,11 @@ VALIDATE(){
 
 
 
-yum install mysql -y 
+yum install mysql1 -y 
 
 VALIDATE $? mysql
 
-yum install git -y 
+yum install gitt -y 
 
 VALIDATE $? git
 
