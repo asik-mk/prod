@@ -3,7 +3,7 @@ ID=$(id -u)
 
 yum install mysql -y
 
-    if[ $ID -ne 0 ]
+    if [ $ID -ne 0 ]
     then
         echo "Switch to root user"
     else 
