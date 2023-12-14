@@ -10,26 +10,25 @@ else
     echo "You are root user"
 fi # fi means reverse of if, indicating condition end 
 
-yum install mysql -y
+VALIDATE()
+    {
 
-    if [ $? -ne 0 ]
+    if [ $1 -ne 0 ]
     then 
-            echo "installation failed"
+            echo "installation of $2 failed"
                 exit 1
     else
 
-        echo "Successfully installed mysql"
+        echo "Successfully installed $2"
 
     fi
 
+}
+
+yum install mysql -y
+
+VALIDATE $? mysql
+
 yum install git -y
 
- if [ $? -ne 0 ]
- then 
-    echo "installation failed"
-    exit 1
- else 
-    echo "successfully installed git"
- fi   
-  
-
+VALIDATE $? git
