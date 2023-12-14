@@ -11,7 +11,7 @@ LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 if [ $ID -ne 0 ]
 then
-    echo -e "$R ERROR$N:: Please run this script with root access"
+    echo -e "$R ERROR$N:: Please run this script with $Y root $N access"
     exit 1 # you can give other than 0
 else
     echo -e "You are $G root $N user"
