@@ -14,7 +14,7 @@ N="\e[0m"
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 VALIDATE(){
-    if [ $1 -ne 0 ]7
+    if [ $1 -ne 0 ]
     then
         echo -e "Installation of $2 $R failed $N"
         exit 1
