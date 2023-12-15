@@ -24,10 +24,10 @@ VALIDATE(){
 
 for package in $@
 do
-    yum list insatlled $package &>> $LOGFILE
+    yum list installed $package &>> $LOGFILE
     if [ $? -ne 0 ]
     then
-        dnf install $package -y &>> $LOGFILE
+        yum install $package -y &>> $LOGFILE
         VALIDATE $? $package
         exit 1
     else
