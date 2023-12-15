@@ -22,25 +22,18 @@ VALIDATE(){
     fi
 }
 
+for package in $@
+do
+    yum list insatlled $package
+    if [ $? -ne 0 ]
+    then
+        yum install $package -y
+        VALIDATE $? 
+    else
+        echo " $package already Installed "
+    fi
+done
 
-yum list installed mysql
+VALIDATE $? $package
 
-if [ $? -ne 0 ]
-then
-    yum install mysql -y
-else
-    echo " mysql already Installed "
-fi
 
-VALIDATE $? mysql
-
-yum list installed httpd
-
-if [ $? -ne 0 ]
-then
-    yum install httpd -y
-else
-    echo " httpd already installed "
-fi
-
-VALIDATE $? httpd
