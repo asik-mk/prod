@@ -7,10 +7,10 @@ VALIDATE(){
 
     if [ $1 -ne 0 ]
     then
-        echo "$package installation failed"
+        echo "$2 installation failed"
         exit 1
     else
-        echo "$package successfully installed"
+        echo "$2 successfully installed"
     fi
 
 }
