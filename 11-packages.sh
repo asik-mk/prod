@@ -16,7 +16,6 @@ VALIDATE(){
     if [ $1 -ne 0 ]
     then
         echo " $2 installation failed/already exists "
-        exit 1
     else 
         echo " $2 installed now "
     fi
@@ -29,7 +28,6 @@ do
     then
         yum install $package -y &>> $LOGFILE
         VALIDATE $? $package
-        exit 1
     else
         echo " $package already Installed "
     fi
