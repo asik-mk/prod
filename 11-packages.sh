@@ -3,7 +3,7 @@ ID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP-log"
 
-if [ ID -ne 0 ]
+if [ $ID -ne 0 ]
 then
     echo " Switch to root user "
     exit 1
